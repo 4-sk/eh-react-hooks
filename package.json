@@ -1,0 +1,61 @@
+{
+  "name": "eh-react-hooks",
+  "version": "0.0.1",
+  "description": "@foursk/eh extension for react hooks",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4-sk/eh-react-hooks.git"
+  },
+  "keywords": [
+    "eh",
+    "event",
+    "react",
+    "hooks"
+  ],
+  "author": "foursk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4-sk/eh-react-hooks/issues"
+  },
+  "homepage": "https://github.com/4-sk/eh-react-hooks#readme",
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run lint && npm run build && mocha --require @babel/register --require @babel/polyfill tests/**/*.test.js",
+    "tscw": "tsc --watch",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json && eslint -c .eslintrc.json examples tests",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run format && npm run lint && npm test"
+  },
+  "peerDependencies": {
+    "@foursk/eh": "^0.1.4",
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/register": "^7.0.0",
+    "@foursk/eh": "^0.1.4",
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "@types/react": "^16.8.8",
+    "babel-eslint": "^9.0.0",
+    "chai": "^4.2.0",
+    "eslint-plugin-mocha": "^5.2.1",
+    "eslint": "5.12.0",
+    "mocha": "^5.2.0",
+    "moment": "^2.23.0",
+    "prettier": "^1.15.3",
+    "tslint": "^5.12.0",
+    "tslint-config-prettier": "^1.17.0",
+    "typescript": "^3.2.1",
+    "react": "^16.8.0"
+  },
+  "files": [
+    "/dist/**/*"
+  ]
+}
