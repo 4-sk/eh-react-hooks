@@ -1,4 +1,4 @@
 import { useEh } from './useEh';
-import { useEhEvent, useDefaultEhEvent } from './useEhEvent';
+import { useEhEvent } from './useEhEvent';
 
-export { useEh, useEhEvent, useDefaultEhEvent };
+export { useEh, useEhEvent };

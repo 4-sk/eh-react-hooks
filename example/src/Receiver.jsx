@@ -1,10 +1,11 @@
 import React from 'react';
 import { colorEvent, freeTextEvent, resizeEvent } from './events';
-import { useDefaultEhEvent, useEh, useEhEvent } from '@foursk/eh-react-hooks'
+
+import { useEh, useEhEvent } from '@foursk/eh-react-hooks'
 
 export function Receiver() {
-    const { color } = useDefaultEhEvent(colorEvent, { color: 'red' });
-    const { width, height, value } = useEhEvent(resizeEvent, { width: 200, height: 100, value }, ({ value }) => ({ width: value * 2, height: value, value }));
+    const { color } = useEhEvent(colorEvent, { color: 'red' });
+    const { width, height, value } = useEhEvent(resizeEvent, { width: 200, height: 100, value: 100 }, ({ value }) => ({ width: value * 2, height: value, value }));
     const { text } = useEh(freeTextEvent, { text: '' }, (data, name) => ({ text: data }));
 
 
