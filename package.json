@@ -1,6 +1,6 @@
 {
-  "name": "eh-react-hooks",
-  "version": "0.0.1",
+  "name": "@foursk/eh-react-hooks",
+  "version": "0.0.2",
   "description": "@foursk/eh extension for react hooks",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -25,12 +25,12 @@
     "test": "npm run lint && npm run build && mocha --require @babel/register --require @babel/polyfill tests/**/*.test.js",
     "tscw": "tsc --watch",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json && eslint -c .eslintrc.json example",
+    "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run format && npm run lint && npm test"
+    "prepublishOnly": "npm run format && npm run lint"
   },
   "peerDependencies": {
-    "@foursk/eh": "^0.1.4",
+    "@foursk/eh": "^0.1.5",
     "react": "^16.8.0"
   },
   "devDependencies": {
@@ -45,15 +45,16 @@
     "@types/react": "^16.8.8",
     "babel-eslint": "^9.0.0",
     "chai": "^4.2.0",
-    "eslint-plugin-mocha": "^5.2.1",
     "eslint": "5.12.0",
+    "eslint-config-react-app": "^3.0.8",
+    "eslint-plugin-mocha": "^5.2.1",
     "mocha": "^5.2.0",
     "moment": "^2.23.0",
     "prettier": "^1.15.3",
+    "react": "^16.8.0",
     "tslint": "^5.12.0",
     "tslint-config-prettier": "^1.17.0",
-    "typescript": "^3.2.1",
-    "react": "^16.8.0"
+    "typescript": "^3.2.1"
   },
   "files": [
     "/dist/**/*"
