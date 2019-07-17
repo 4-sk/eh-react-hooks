@@ -6,7 +6,7 @@ export function useEhEvent<T_EVENTDATA, T_PROPS = T_EVENTDATA>
   (
     ehEvent: EhEvent<T_EVENTDATA>,
     defaultProps: T_PROPS,
-    eventToProps: EventToProps<T_EVENTDATA, T_PROPS> = (data) => <T_PROPS><unknown>data,
+    eventToProps: EventToProps<T_EVENTDATA, T_PROPS> = data => (data as unknown) as T_PROPS,
     eventHub: EventHub = eh) {
   return useEh(ehEvent.name, defaultProps, eventToProps, eventHub);
 }
