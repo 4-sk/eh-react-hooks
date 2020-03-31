@@ -16,7 +16,8 @@
         "sourceType": "module"
     },
     "plugins": [
-        "mocha"
+        "mocha",
+        "react-hooks"
     ],
     "rules": {
         "semi": [
@@ -24,7 +25,9 @@
             "always"
         ],
         "no-console": "off",
-        "no-unused-vars": 1
+        "no-unused-vars": 1,
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn"
     },
     "settings": {}
 }
