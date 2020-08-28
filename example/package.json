@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@foursk/eh": "^0.1.4",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8",
-    "@foursk/eh-react-hooks": "file:.."
+    "@foursk/eh": "^1.0.0",
+    "@foursk/eh-react-hooks": "file:..",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
