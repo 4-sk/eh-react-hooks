@@ -1,6 +1,6 @@
 {
   "name": "@foursk/eh-react-hooks",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "@foursk/eh extension for react hooks",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -30,7 +30,7 @@
     "prepublishOnly": "npm run format && npm run lint"
   },
   "peerDependencies": {
-    "@foursk/eh": "^1.0.0",
+    "@foursk/eh": "^1.0.1",
     "react": "^16.8.0"
   },
   "devDependencies": {
@@ -39,7 +39,7 @@
     "@babel/polyfill": "^7.8.7",
     "@babel/preset-env": "^7.9.0",
     "@babel/register": "^7.9.0",
-    "@foursk/eh": "^1.0.0",
+    "@foursk/eh": "^1.0.1",
     "@types/chai": "^4.2.11",
     "@types/mocha": "^5.2.5",
     "@types/react": "^16.9.27",

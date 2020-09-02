@@ -1,6 +1,8 @@
 import eh, { EventHub } from '@foursk/eh';
 import { useEffect, useState } from 'react';
-import { EventToProps } from './common';
+import { EventToProps, T_PROPS_WITH_CANNON } from './common';
+
+
 
 export function useEh<T_EVENTDATA, T_PROPS>(
   eventName: string,
@@ -11,8 +13,12 @@ export function useEh<T_EVENTDATA, T_PROPS>(
   const [props, setProps] = useState(defaultProps);
 
   useEffect(() => {
+    const cannon = eventHub.cannon<T_PROPS>(eventName);
+
     const handler = (data: T_EVENTDATA) => {
-      setProps(eventToProps(data, eventName));
+      const newProps = eventToProps(data, eventName) as T_PROPS_WITH_CANNON<T_PROPS>;
+      newProps.cannon = cannon;
+      setProps(newProps);
     };
     eventHub.register<T_EVENTDATA>(eventName, handler);
 
